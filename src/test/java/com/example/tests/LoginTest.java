@@ -1,36 +1,23 @@
 package com.example.tests;
-
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.Assert;
+import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import io.github.bonigarcia.wdm.WebDriverManager;
-
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class LoginTest {
-    private WebDriver driver;
-
-    @BeforeEach
-    public void setUp() {
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
-    }
 
     @Test
-    public void testLogin() {
-        driver.get("https://example.com/login");
-        driver.findElement(By.id("username")).sendKeys("admin");
-        driver.findElement(By.id("password")).sendKeys("password123");
-        driver.findElement(By.id("loginButton")).click();
+    public void checkAddToCart() {
+        System.setProperty("webdriver.chrome.driver", "path/to/chromedriver");
+        WebDriver driver = new ChromeDriver();
+        driver.get("https://agonagon.ru/");
 
-        assertTrue(driver.findElement(By.id("welcomeMessage")).isDisplayed());
-    }
+        driver.findElement(By.xpath("//button[text()='ПО ПРЕДЗАКАЗУ']")).click();
+        String cartTotal = driver.findElement(By.cssSelector(".cart-total")).getText();
 
-    @AfterEach
-    public void tearDown() {
+        Assert.assertNotEquals("0 р.", cartTotal);
+
         driver.quit();
     }
 }
