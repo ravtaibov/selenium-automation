@@ -1,110 +1,61 @@
+# ===== ИНСТРУКЦИЯ ПО ЗАПУСКУ АВТОТЕСТОВ =====
 
-# Инструкция по запуску автотестов
+# 1. УСТАНОВКА ЗАВИСИМОСТЕЙ
+# - Убедитесь, что установлены:
+#   * Java 21 (проверка: java -version)
+#   * Maven (проверка: mvn -version)
+#   * Google Chrome
+#   * ChromeDriver (версия должна совпадать с Chrome: https://chromedriver.chromium.org/downloads)
 
-## 1. Установка зависимостей
-
-Перед запуском тестов убедитесь, что у вас установлены:
-
-- **Java 21**  
-  Проверьте установку командой:
-  ```bash
-  java -version
-  ```
-
-- **Maven**  
-  Проверьте установку командой:
-  ```bash
-  mvn -version
-  ```
-
-- **Google Chrome**  
-  Убедитесь, что браузер установлен.
-
-- **ChromeDriver**  
-  Должен соответствовать версии Chrome.  
-  Скачать можно по ссылке: [https://chromedriver.chromium.org/downloads](https://chromedriver.chromium.org/downloads)
-
-## 2. Клонирование репозитория
-
-Если у вас ещё нет проекта, скачайте его с GitHub:
-
-```bash
-   git clone https://github.com/ravtaibov/selenium-automation
+# 2. КЛОНИРОВАНИЕ РЕПОЗИТОРИЯ
+git clone https://github.com/ТВОЙ_ГИТХАБ/selenium-automation.git
 cd selenium-automation
-```
 
-## 3. Запуск тестов
+# 3. ЗАПУСК ТЕСТОВ
 
-### Запуск всех тестов
+# Все тесты:
+mvn test
 
-```bash
-  mvn test
-```
+# === Для сайта agonagon.ru ===
+# Все тесты сайта:
+mvn -Dtest=agon/* test
 
-### Запуск тестов для agonagon.ru
+# Категории тестов:
+# Общие тесты (заголовки, кнопки)
+mvn -Dtest=agon.general/* test
 
-```bash
-   mvn -Dtest=agon/* test
-```
+# Переходы по страницам
+mvn -Dtest=agon.navigation/* test
 
-#### Запуск тестов по категориям:
+# Формы (логин, бронирование)
+mvn -Dtest=agon.forms/* test
 
-- **Общие тесты (заголовки, кнопки)**
+# Поиск
+mvn -Dtest=agon.search/* test
 
-  ```bash
-     mvn -Dtest=agon.general/* test
-  ```
+# === Для сайта example.com ===
+# Все тесты сайта:
+mvn -Dtest=example/* test
 
-- **Переходы по страницам**
+# Категории тестов:
+# Общие тесты (заголовки, кнопки)
+mvn -Dtest=example.general/* test
 
-  ```bash
-  mvn -Dtest=agon.navigation/* test
-  ```
+# Переходы по страницам
+mvn -Dtest=example.navigation/* test
 
-- **Формы (логин, бронирование)**
+# Формы (логин, контактная форма)
+mvn -Dtest=example.forms/* test
 
-  ```bash
-  mvn -Dtest=agon.forms/* test
-  ```
+# Поиск
+mvn -Dtest=example.search/* test
 
-- **Поиск**
+# 4. ПРОСМОТР ОТЧЕТОВ
+# Отчеты доступны в:
+# - Для agonagon.ru: docs/agon/
+# - Для example.com: docs/example/
 
-  ```bash
-  mvn -Dtest=agon.search/* test
-  ```
-
-### Запуск тестов для example.com
-
-```bash
-   mvn -Dtest=example/* test
-```
-
-#### Запуск тестов по категориям:
-
-- **Общие тесты (заголовки, кнопки)**
-
-  ```bash
-  mvn -Dtest=example.general/* test
-  ```
-
-- **Переходы по страницам**
-
-  ```bash
-  mvn -Dtest=example.navigation/* test
-  ```
-
-- **Формы (логин, контактная форма)**
-
-  ```bash
-  mvn -Dtest=example.forms/* test
-  ```
-
-- **Поиск**
-
-  ```bash
-  mvn -Dtest=example.search/* test
-  ```
-
-## 4. Просмотр отчётов
-
-После выполнения тестов можно проверить тестовую документацию:
+# ПРИМЕЧАНИЯ:
+# 1. Замените ТВОЙ_ГИТХАБ в URL репозитория
+# 2. ChromeDriver должен быть в PATH или укажите путь в настройках
+# 3. Для запуска конкретного класса: mvn -Dtest=ClassName test
