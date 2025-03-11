@@ -1,4 +1,4 @@
-package agon;  // 👈 Это путь к файлу, проверь, чтобы совпадал!
+package example.com;  // 👈 Это путь к файлу, проверь, чтобы совпадал!
 
 import org.junit.jupiter.api.Assertions;    // JUnit 5 для тестов
 import org.junit.jupiter.api.Test;          // Аннотация @Test из JUnit 5
