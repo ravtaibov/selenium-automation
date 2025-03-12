@@ -25,7 +25,7 @@ sudo mv chromedriver /usr/local/bin/
   Проверьте установку командой:
   ```bash
   java -version
-Maven
+- **Maven**
 Проверьте установку командой:
 ```bash
   mvn -version
