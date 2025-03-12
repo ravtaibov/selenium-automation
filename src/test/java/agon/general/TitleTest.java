@@ -1,4 +1,4 @@
-package agon;
+package agon.general;
 
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;

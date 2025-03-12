@@ -8,7 +8,7 @@
 - **Google Chrome** (проверьте, что браузер установлен)
 - **ChromeDriver** (должен соответствовать версии Chrome, скачать: [Chromedriver](https://chromedriver.chromium.org/downloads))
 
-### Установка ChromeDriver (Linux/macOS)
+### Установка ChromeDriver 
 ```bash
    CHROME_VERSION=$(google-chrome --version | grep -oE '[0-9.]+' | head -1)
 wget https://chromedriver.storage.googleapis.com/$CHROME_VERSION/chromedriver_linux64.zip

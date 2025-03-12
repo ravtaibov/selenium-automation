@@ -1,4 +1,4 @@
-package agon;
+package agon.navigation;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;

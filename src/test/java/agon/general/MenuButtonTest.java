@@ -1,4 +1,4 @@
-package agon;
+package agon.general;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;

@@ -1,4 +1,4 @@
-package example.com;
+package example.com.general;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;

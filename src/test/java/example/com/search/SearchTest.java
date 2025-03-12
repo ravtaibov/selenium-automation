@@ -1,4 +1,4 @@
-package example.com;
+package example.com.search;
 
 
 import org.junit.Assert;
