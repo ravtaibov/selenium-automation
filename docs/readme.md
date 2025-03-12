@@ -100,5 +100,6 @@ https://github.com/ravtaibov/selenium-automation
 Тестовая документация для agonagon.ru — docs/agon/
 
 Тестовая документация для example.com — docs/example/
+
 Если тесты упали, ошибки можно посмотреть в терминале.
 
