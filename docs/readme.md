@@ -48,11 +48,11 @@ https://github.com/ravtaibov/selenium-automation
 ````bash
    mvn test
  ````
- # Запуск тестов для agonagon.ru
+  Запуск тестов для agonagon.ru
 ````bash
   mvn -Dtest=agon.* test
   ````
-  # Запуск тестов по категориям:
+   Запуск тестов по категориям:
 
   Общие тесты (заголовки, кнопки)
 
@@ -94,7 +94,7 @@ https://github.com/ravtaibov/selenium-automation
 ````bash
   mvn -Dtest=example.search.* test
   ````
-  4. Просмотр отчётов
+ # 4. Просмотр отчётов
   После выполнения тестов можно проверить тестовую документацию:
 
 Тестовая документация для agonagon.ru — docs/agon/
