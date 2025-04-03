@@ -3,23 +3,6 @@
 ## 1. Установка зависимостей
 
 Перед запуском тестов убедитесь, что у вас установлены:
-- **Java 21** (проверьте командой: `java -version`)
-- **Maven** (проверьте командой: `mvn -version`)
-- **Google Chrome** (проверьте, что браузер установлен)
-- **ChromeDriver** (должен соответствовать версии Chrome, скачать: [Chromedriver](https://chromedriver.chromium.org/downloads))
-
-### Установка ChromeDriver 
-```bash
-   CHROME_VERSION=$(google-chrome --version | grep -oE '[0-9.]+' | head -1)
-wget https://chromedriver.storage.googleapis.com/$CHROME_VERSION/chromedriver_linux64.zip
-unzip chromedriver_linux64.zip
-sudo mv chromedriver /usr/local/bin/
-```
-# Инструкция по запуску автотестов
-
-## 1. Установка зависимостей
-
-Перед запуском тестов убедитесь, что у вас установлены:
 
 - **Java 21**  
   Проверьте установку командой:
